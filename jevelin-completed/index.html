@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javelin - Home</title>
+    <!--Ionic icons CDN-->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">Jevelin</a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Shop</a>
+                </li>
+            </ul>
+            <div class="shopping-bag">
+                <i class="ion-bag"><span class="bag-item-count">0</span></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="circle circle-small">
+        <img src="images/circle-small.png" alt="">
+    </div>
+    <div class="circle circle-large">
+        <img src="images/circle-large.png" alt="">
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="text">
+                <h1>Lifestyle <br> Smart <span>Watch</span></h1>
+                <h5>Technology of the future</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi blanditiis cumque ea, error esse eveniet harum illo magnam minus natus neque optio placeat quibusdam ratione saepe sint tenetur voluptas!</p>
+                <a href="#" class="cta">Buy now</a>
+            </div>
+            <div class="watch-wrapper">
+                <img src="images/watch.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="layer layer-1"></div>
+        <div class="layer layer-2"></div>
+        <div class="layer layer-3"></div>
+    </div>
+</section>
+<!--Gsap CDN    -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js"></script>
+
+<script>
+    gsap.to('.layer-1', {y: '-100vh', delay: .5});
+    gsap.to('.layer-2', {y: '-100vh', delay: .7});
+    gsap.to('.layer-3', {y: '-100vh', delay: .9});
+    gsap.to('.overlay', {y: '-100vh', delay: 1.5});
+
+    gsap.fromTo('.text',
+        {x: '30rem', opacity: 0},
+        {x: 0, opacity: 1, ease: 'back.out(1.7)', delay:1.9});
+
+    gsap.fromTo('.watch-wrapper',
+        {x: '30rem', opacity: 0},
+        {x: 0, opacity: 1, ease: 'back.out(1.7)', delay:2.3});
+
+    gsap.fromTo('.circle-small',
+        {x: '-30rem', opacity: 0},
+        {x: 0, opacity: 1, ease: 'back.out(1.7)', delay:1});
+
+    gsap.fromTo('.circle-large',
+        {x: '30rem', opacity: 0},
+        {x: 0, opacity: 1, ease: 'back.out(1.7)', delay:1.5});
+</script>
+</body>
+</html>
